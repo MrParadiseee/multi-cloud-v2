@@ -21,7 +21,10 @@ while count < round(math.log(upper - lower + 1, 2)):
     guess = int(input("Guess a number:- "))
     # Condition testing
     if x == guess:
-        print("Congratulations you did it in ", count, " try")
+        if count == 1:
+            print("Congratulations you did it in ", count, " try")
+        else:
+            print("Congratulations you did it in ", count, " tries")
         # Once guessed, loop will break
         break
     elif x > guess:
